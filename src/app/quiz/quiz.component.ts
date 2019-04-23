@@ -16,6 +16,8 @@ export class QuizComponent implements OnInit {
   activeItem : number;
   totalScore : number = 0;
   finalStatus : string;
+  meter : string;
+  show : boolean = false;
 
   constructor() { }
 
@@ -35,22 +37,25 @@ export class QuizComponent implements OnInit {
       this.activeItem = 0;
     }, 1000);
 
-    console.log(this.totalQ);
-    console.log(this.questions.length+1);
-
     if(this.totalQ == this.questions.length){
-      if(this.totalScore <= 101) {
-        this.finalStatus = 'Low compatibility';
-      } else if( this.totalScore < 201 && this.totalScore >= 101 ) {
-        this.finalStatus = 'Medium compatibility';
-      } else if( this.totalScore < 376 && this.totalScore >= 201 ) {
-        this.finalStatus = 'High compatibility';
+      if(this.totalScore <= 126) {
+        this.finalStatus = 'Ah...Not that I dont like your tastes, we could still be friend of course';
+        this.meter = 'low';
+      } else if( this.totalScore < 251 && this.totalScore >= 126 ) {
+        this.finalStatus = 'Hmmm... Though we have different tastes, but there are few things we have in common :)';
+        this.meter = 'medium';
+      } else if( this.totalScore < 376 && this.totalScore >= 251 ) {
+        this.finalStatus = 'We have common tastes, we could talk about a lot of things!';
+        this.meter = 'high';
       } else if(this.totalScore >= 376) {
-        this.finalStatus = 'Super compatibility';
+        this.finalStatus = 'Super! Are you my long lost twins?';
+        this.meter = 'super';
       }
-
-      console.log(this.finalStatus);
     }
+  }
+
+  showPicture() {
+    this.show = true;
   }
 
   ngOnInit() {

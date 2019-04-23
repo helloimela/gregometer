@@ -28,20 +28,20 @@ export const QUESTIONS: Item[] = [
     question: 'What do you do in your spare time?',
     options: [
       {
-        option : 'Play some musical instruments',
-        score : 100
-      },
-      {
-        option : 'Playing game of course!',
-        score : 75
-      },
-      {
         option : 'Netflix',
         score : 50
       },
       {
         option : 'Cooking!',
         score : 25
+      },
+      {
+        option : 'Playing game of course!',
+        score : 75
+      },
+      {
+        option : 'Play some musical instruments',
+        score : 100
       }
     ]
   },
@@ -54,16 +54,16 @@ export const QUESTIONS: Item[] = [
         score : 100
       },
       {
-        option : 'BCL',
-        score : 75
-      },
-      {
         option : 'Raisa',
         score : 50
       },
       {
         option : 'Marion Jola',
         score : 25
+      },
+      {
+        option : 'BCL',
+        score : 75
       }
     ]
   },
@@ -71,21 +71,22 @@ export const QUESTIONS: Item[] = [
     id : 4,
     question: 'Choose one movie that amazed you the most:',
     options: [
+
       {
-        option : 'Baby Driver',
-        score : 100
+        option : 'A Star Is Born',
+        score : 25
       },
       {
         option : 'Inception',
         score : 75
       },
       {
-        option : 'Bohemian Rhapsody',
-        score : 50
+        option : 'Baby Driver',
+        score : 100
       },
       {
-        option : 'A Star Is Born',
-        score : 25
+        option : 'Bohemian Rhapsody',
+        score : 50
       }
     ]
   },
@@ -94,16 +95,16 @@ export const QUESTIONS: Item[] = [
     question: 'What is your favorite game?',
     options: [
       {
-        option : 'Simcity',
-        score : 100
+        option : 'Fifa',
+        score : 50
       },
       {
         option : 'Need for Speed',
         score : 75
       },
       {
-        option : 'Fifa',
-        score : 50
+        option : 'Simcity',
+        score : 100
       },
       {
         option : 'Street Fighter',

@@ -4,3 +4,43 @@ header{
   padding-top:50px;
   padding-bottom: 50px;
 }
+.meter{
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+}
+.meter .line{
+  width: 100%;
+  display: block;
+  height: 8px;
+  background: #179c3d;
+  border-radius: 5px;
+}
+.meter .image{
+  background-image: url('assets/ian.jpg');
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  animation: rolling 4s alternate infinite;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes rolling {
+  from {
+    left:-5%;
+    transform: rotate(0deg) scale(0.5);
+    -webkit-transform: rotate(0deg) scale(0.5);
+  }
+  to {
+    transform: rotate(360deg) scale(1.5);
+    -webkit-transform: rotate(360deg) scale(1.5);
+    left:100%;
+  }
+}
