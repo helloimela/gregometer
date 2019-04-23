@@ -1,0 +1,14 @@
+.btn{
+  width: 100%;
+  margin-top: 50px;
+}
+.btn-primary{
+  background: #000080;
+}
+.card-header{
+  background: #000080;
+  color: #fff;
+}
+.list-group-item.selected {
+  background: #d8ffd8;
+}

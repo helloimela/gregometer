@@ -1,0 +1,27 @@
+<div *ngIf="myArray" class="card">
+  <div class="card-header">{{myArray.question}}</div>
+
+  <ul class="list-group">
+    <li *ngFor="let opt of myArray.options"
+      [class.selected]="opt.score === activeItem"
+      (click)="saveAnswer(opt.score)"
+      class="list-group-item">
+      {{opt.option}}
+    </li>
+  </ul>
+
+</div>
+
+<div class="row">
+  <div *ngIf="totalQ == 0" class="col-md-12">
+    <button type="button" name="start" (click)="startQuiz(questions[0])" class="btn btn-primary">Start</button>
+  </div>
+</div>
+
+<div class="row">
+  <div *ngIf="totalQ == questions.length+1" class="col-md-12">
+    <p>Total Score</p>
+    <p>{{totalScore}}</p>
+    <p>{{finalStatus}}</p>
+  </div>
+</div>
