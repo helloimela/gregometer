@@ -29,3 +29,6 @@
 .final-image.selected{
   display: block;
 }
+.btn-getpicture{
+  margin-top: 0;
+}
